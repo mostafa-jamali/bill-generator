@@ -1,0 +1,59 @@
+@font-face{
+    font-family: myFirstFont;
+  src: url(./font/Yekan\ Bakh\ Medium.woff);
+}
+*{
+    font-family: myFirstFont;
+}
+body{
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+.all-bill{
+    width: 603px;
+    height: 944px;
+    text-align: center;
+    border-radius: 36.3px;
+    border: solid 7px rgba(241, 196, 15, 0.5);
+    overflow: hidden;
+    padding: 0 30px;
+}
+.rest-name{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.info-food{
+    text-align: start;
+}
+.pl-mi{
+    display: flex;
+    align-items: center;
+    margin: 5px 20px;
+    height: 30px;
+}
+.pl-mi .pl-mi-h{
+    width: 30px;
+    height: 15px;
+}
+.f-size1{
+    font-size: 18px;
+    font-weight: bold;
+}
+.f-size2{
+    font-size: 28px;
+    font-weight: bold;
+}
+.food{
+    width: 60%;
+}
+.cost{
+    height: 110px;
+}
