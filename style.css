@@ -13,22 +13,38 @@ body{
 }
 .all-bill{
     width: 603px;
-    height: 944px;
+    height: 750px;
     text-align: center;
     border-radius: 36.3px;
     border: solid 7px rgba(241, 196, 15, 0.5);
-    overflow: hidden;
-    padding: 0 30px;
+    overflow-x: hidden;
 }
 .rest-name{
     width: 100%;
-    height: 50px;
+    height: 70px;
     font-size: 20px;
     font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
+    background-color: white;
+    box-shadow: 0 0 30px 10px white;
+}
+.table-food{
+    overflow-y: scroll;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;    
+}
+.table{
+    width: 90% !important;
+}
+.table-food::-webkit-scrollbar {
+    display: none;
 }
 .info-food{
     text-align: start;
@@ -52,8 +68,70 @@ body{
     font-weight: bold;
 }
 .food{
-    width: 60%;
+    width: 65%;
 }
 .cost{
     height: 110px;
+}
+.info-sefaresh{
+    width: 100%;
+    height: 250px;
+    z-index: 10;
+    box-shadow: 0 0 30px 10px white;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;    
+}
+.info-sefaresh .right-side{
+    width: 250px;
+}
+.info-sefaresh .right-side p,span{
+    font-size: 17px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.71);
+}
+.info-sefaresh .right-side h1{
+    font-weight: bold;
+}
+.info-sefaresh .left-side{
+    width: 300px;
+    margin: 30px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.info-sefaresh .left-side .code-takhfif{
+    width: 297px;
+    height: 45px;
+    color: #f39c12;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 23px;
+    border: solid 1.5px #e67e22;
+    padding: 0 20px 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-sefaresh .left-side .code-takhfif .plus-takhfif{
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+    border-image-source: linear-gradient(to bottom, #f8c26e, #ffcd7e);
+    background-color: #f39c12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-sefaresh .left-side .sabte-sefaresh{
+    width: 297px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: #e67e22;
+    font-size: 29.3px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
