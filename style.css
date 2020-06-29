@@ -1,6 +1,10 @@
 @font-face{
     font-family: myFirstFont;
-  src: url(./font/Yekan\ Bakh\ Medium.woff);
+    src: url(./font/Yekan\ Bakh\ Medium.woff);
+}
+@font-face{
+    font-family:number;
+    src: url(./font/Yekan.ttf);
 }
 *{
     font-family: myFirstFont;
@@ -63,7 +67,24 @@ body{
     font-size: 18px;
     font-weight: bold;
 }
+.f-size1 span{
+    margin-left: 5px;
+}
+.f-size1 span{
+    font-size: 18px;
+    font-weight: bold;
+    width: 75px;
+    text-align: left;
+    font-family: number;
+}
+.quality{
+    width: 45px;
+    display: flex;
+    justify-content: space-between;
+}
 .f-size2{
+    width: 15px;
+    letter-spacing: -5px;
     font-size: 28px;
     font-weight: bold;
 }
@@ -72,6 +93,10 @@ body{
 }
 .cost{
     height: 110px;
+}
+.cost span{
+    margin-bottom: 3px;
+    margin-left: 5px;
 }
 .info-sefaresh{
     width: 100%;
@@ -84,6 +109,13 @@ body{
 }
 .info-sefaresh .right-side{
     width: 250px;
+}
+.info-sefaresh .right-side span{
+    font-family: number;
+}
+h1 span{
+    font-size: 35px;
+    font-weight: bolder;
 }
 .info-sefaresh .right-side p,span{
     font-size: 17px;
@@ -116,6 +148,7 @@ body{
     font-weight: 600;
     outline: none;
     border: none;
+    background-color: transparent;
 }
 .info-sefaresh .left-side .code-takhfif input::placeholder{
     color: #f39c12;
@@ -133,16 +166,19 @@ body{
     justify-content: center;
 }
 .info-sefaresh .left-side .code-takhfif .trash-takhfif{
+    display: none;
     width: 38px;
     height: 38px;
     border-radius: 19px;
     border-image-source: linear-gradient(to bottom, #f8c26e, #ffcd7e);
     background-color: #e74c3c;
-    display: flex;
     align-items: center;
     justify-content: center;
+    background-color: tomato;
 }
-
+#qty{
+    font-family: number;
+}
 .info-sefaresh .left-side .sabte-sefaresh{
     width: 297px;
     height: 60px;
@@ -169,8 +205,11 @@ body{
     background-color: #ff6600;
     transform: scale(1.1);
 }
-#trash-takhfif:hover{
+.trash-takhfif:hover{
     cursor: pointer;
     background-color: #fc1900;
     transform: scale(1.1);
+}
+.mines-food{
+    display: none !important;
 }
