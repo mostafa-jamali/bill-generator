@@ -28,104 +28,92 @@
                     <tr id="1">
                         <th scope="row"><img class="food" src="./image/food1.png" alt=""></th>
                         <td class="info-food">
-                            <div>
-                                <p class="m-0 f-size1">قیمه مکزیکی با سس آلفردو</p>
-                                <p class="m-0 f-size1"><span id="price">37000</span> تومان</p>
-                                <div class="pl-mi quality">
-                                    <div class="f-size2" id="qty">0</div>
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img id="plus-food" src="./image/plus.svg" alt=""></div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-food"><img id="mines-food" src="./image/mines.svg" alt=""></div>
-                                    </div>
+                            <p class="m-0 f-size1">قیمه مکزیکی با سس آلفردو</p>
+                            <p class="m-0 f-size1"><span class="price" value="37000">37000</span> تومان</p>
+                            <div class="pl-mi quality">
+                                <div class="qty" value="1">0</div>
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img class="plus-food" onclick="plus(1)" src="./image/plus.svg" alt=""></div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-icon"><img class="mines-food" onclick="minus(1)" src="./image/mines.svg" alt=""></div>
                                 </div>
                             </div>
                         </td>
-                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span id="price-food">0</span> تومان</td>
+                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span class="price-food" value="0">0</span> تومان</td>
                     </tr>
                     <tr id="2">
                         <th scope="row"><img class="food" src="./image/food1.png" alt=""></th>
                         <td class="info-food">
-                            <div>
-                                <p class="m-0 f-size1">چلو کباب</p>
-                                <p class="m-0 f-size1"><span id="price">35000</span> تومان</p>
-                                <div class="pl-mi quality">
-                                    <div class="f-size2" id="qty">0</div>
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img id="plus-food" src="./image/plus.svg" alt=""></div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-food"><img id="mines-food" src="./image/mines.svg" alt=""></div>
-                                    </div>
+                            <p class="m-0 f-size1">چلو کباب</p>
+                            <p class="m-0 f-size1"><span class="price" value="35000">35000</span> تومان</p>
+                            <div class="pl-mi quality">
+                                <div class="qty" value="0">0</div>
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img class="plus-food" onclick="plus(2)" src="./image/plus.svg" alt=""></div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-icon"><img class="mines-food" onclick="minus(2)" src="./image/mines.svg" alt=""></div>
                                 </div>
                             </div>
                         </td>
-                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span id="price-food">0</span> تومان</td>
+                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span class="price-food" value="0">0</span> تومان</td>
                     </tr>
-                    <tr>
+                    <tr id="3">
                         <th scope="row"><img class="food" src="./image/food1.png" alt=""></th>
                         <td class="info-food">
-                            <div>
-                                <p class="m-0 f-size1">جوجه کباب</p>
-                                <p class="m-0 f-size1"><span>32000</span> تومان</p>
-                                <div class="pl-mi quality">
-                                    <div class="f-size2" id="qty">0</div>
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img id="plus-food" src="./image/plus.svg" alt=""></div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-food"><img id="mines-food" src="./image/mines.svg" alt=""></div>
-                                    </div>
+                            <p class="m-0 f-size1">جوجه کباب</p>
+                            <p class="m-0 f-size1"><span class="price" value="35000">34000</span> تومان</p>
+                            <div class="pl-mi quality">
+                                <div class="qty" value="0">0</div>
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img class="plus-food" onclick="plus(3)" src="./image/plus.svg" alt=""></div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-icon"><img class="mines-food" onclick="minus(3)" src="./image/mines.svg" alt=""></div>
                                 </div>
                             </div>
                         </td>
-                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span>0</span> تومان</td>
+                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span class="price-food" value="0">0</span> تومان</td>
                     </tr>
-                    <tr>
+                    <tr id="4">
                         <th scope="row"><img class="food" src="./image/food1.png" alt=""></th>
                         <td class="info-food">
-                            <div>
-                                <p class="m-0 f-size1">زرشک پلو با مرغ</p>
-                                <p class="m-0 f-size1"><span>33000</span> تومان</p>
-                                <div class="pl-mi quality">
-                                    <div class="f-size2" id="qty">0</div>
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img id="plus-food" src="./image/plus.svg" alt=""></div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-food"><img id="mines-food" src="./image/mines.svg" alt=""></div>
-                                    </div>
+                            <p class="m-0 f-size1">قورمه سبزی</p>
+                            <p class="m-0 f-size1"><span class="price" value="35000">30000</span> تومان</p>
+                            <div class="pl-mi quality">
+                                <div class="qty" value="0">0</div>
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img class="plus-food" onclick="plus(4)" src="./image/plus.svg" alt=""></div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-icon"><img class="mines-food" onclick="minus(4)" src="./image/mines.svg" alt=""></div>
                                 </div>
                             </div>
                         </td>
-                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span>0</span> تومان</td>
+                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span class="price-food" value="0">0</span> تومان</td>
                     </tr>
-                    <tr>
+                    <tr id="5">
                         <th scope="row"><img class="food" src="./image/food1.png" alt=""></th>
                         <td class="info-food">
-                            <div>
-                                <p class="m-0 f-size1">قورمه سبزی</p>
-                                <p class="m-0 f-size1"><span>28000</span> تومان</p>
-                                <div class="pl-mi quality">
-                                    <div class="f-size2" id="qty">0</div>
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img id="plus-food" src="./image/plus.svg" alt=""></div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-food"><img id="mines-food" src="./image/mines.svg" alt=""></div>
-                                    </div>
+                            <p class="m-0 f-size1">زرشک پلو</p>
+                            <p class="m-0 f-size1"><span class="price" value="35000">32000</span> تومان</p>
+                            <div class="pl-mi quality">
+                                <div class="qty" value="0">0</div>
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img class="plus-food" onclick="plus(5)" src="./image/plus.svg" alt=""></div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-icon"><img class="mines-food" onclick="minus(5)" src="./image/mines.svg" alt=""></div>
                                 </div>
                             </div>
                         </td>
-                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span>0</span> تومان</td>
+                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span class="price-food" value="0">0</span> تومان</td>
                     </tr>
-                    <tr>
+                    <tr id="6">
                         <th scope="row"><img class="food" src="./image/food1.png" alt=""></th>
                         <td class="info-food">
-                            <div>
-                                <p class="m-0 f-size1">خوراک مرغ</p>
-                                <p class="m-0 f-size1"><span>27000</span> تومان</p>
-                                <div class="pl-mi quality">
-                                    <div class="f-size2" id="qty">0</div>
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h oper"><img id="plus-food" src="./image/plus.svg" alt=""></div>
-                                        <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h oper mines-food"><img id="mines-food" src="./image/mines.svg" alt=""></div>
-                                    </div>
+                            <p class="m-0 f-size1">سبزی پلو با ماهی</p>
+                            <p class="m-0 f-size1"><span class="price" value="35000">33000</span> تومان</p>
+                            <div class="pl-mi quality">
+                                <div class="qty" value="0">0</div>
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h"><img class="plus-food" onclick="plus(6)" src="./image/plus.svg" alt=""></div>
+                                    <div class="d-flex align-items-center justify-content-center py-0 pl-mi-h mines-icon"><img class="mines-food" onclick="minus(6)" src="./image/mines.svg" alt=""></div>
                                 </div>
                             </div>
                         </td>
-                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span>0</span> تومان</td>
+                        <td class="d-flex align-items-end justify-content-center cost f-size1"><span class="price-food" value="0">0</span> تومان</td>
                     </tr>
                 </tbody>
             </table>

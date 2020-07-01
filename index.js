@@ -1,39 +1,39 @@
 
-$(document).ready(function(){
-        $("#plus-food").click(function(){
-            const number = parseInt($("#qty").text());
-            $("#mines-food").parent().closest('div').removeClass("mines-food");
-            $("#qty").text(number + 1);
-            $("#price-food").text(parseInt($("#qty").text()) * parseInt($("#price").text()));
-            const priceFood= parseInt($("#price-food").text());
-            
-            $(".all-price-food").text(priceFood);
-            // const allPriceFood = parseInt($(".all-price-food").text(priceFood));            
-            $("#all").text(priceFood - parseInt($("#service").text()) - parseInt($("#amount-takhfif").text()));
-        });
-    
-        $("#mines-food").click(function(){
-            const number = parseInt($("#qty").text()) - 1;
-            if (number <= 0) {
-                $(this).parent().closest('div').addClass("mines-food");
-            }
-            $("#qty").text(number);
-            $("#price-food").text(parseInt($("#qty").text()) * parseInt($("#price").text()));
-            const priceFood= parseInt($("#price-food").text());
-            
-            $(".all-price-food").text(priceFood);
-        });
+function plus(id){
+    $this = $("#table tbody #" + `${id}`);
+    // let i = $this.attr('id');
+    // calc for price-food
+    const qty = parseInt($this.find($(".qty")).text());
+    $this.find($(".mines-icon")).removeClass("mines-icon");
+    $this.find($(".qty")).text(qty + 1);
+    const price = parseInt($this.find($(".price")).text());
+    $this.find($(".price-food")).text((qty+1) * price);
 
-        $("#plus-takhfif").click(function(){
-            codeTakhfif(takhfif);
-        });
-        $("#trash-takhfif").click(function(){
-            $(".code-takhfif .trash-takhfif").css("display" , "none");
-            $(".code-takhfif .plus-takhfif").css("display" , "flex");
-            $(".code-takhfif").css("background-color" , "transparent");
-            $(".code-takhfif input").val("");
-        });
-});
+    allPriceFood();   
+}
+
+function minus(id){
+    $this = $("#table tbody #" + `${id}`);
+    const qty = parseInt($this.find($(".qty")).text()) - 1;
+    if (qty <= 0) {
+        $this.find($(".mines-food")).parent().addClass("mines-icon");
+    }
+    $this.find($(".qty")).text(qty);
+    const price = parseInt($this.find($(".price")).text());
+    $this.find($(".price-food")).text((qty) * price);
+
+    allPriceFood();
+}
+
+function allPriceFood(){
+    let sum = 0;
+    for (let i = 1; i < $("#table tbody").children().length; i++) {
+        const priceFood= parseInt($("#table tbody #" + `${i}`).find($(".price-food")).text());        
+        sum += priceFood
+    }
+    const allPrice = $(".all-price-food").text(sum);
+    $("#all").text(sum + parseInt($("#service").text()) - parseInt($("#amount-takhfif").text()));
+}
 
 const takhfif= {
     gold: 15000,
@@ -50,9 +50,20 @@ function codeTakhfif(obj){
             $(".code-takhfif .plus-takhfif").css("display" , "none");
             $(".code-takhfif .trash-takhfif").css("display" , "flex");
         } else {
-            // $(".code-takhfif").css("background-color" , "rgb(251,223,220)");
-            // $("#amount-takhfif").html(0);
             // $(".code-takhfif input").val("");
+            // $("#amount-takhfif").html(0);
+            // $(".code-takhfif").css("background-color" , "rgb(251,223,220)");
         }
     }
 }
+
+$("#plus-takhfif").click(function(){
+    codeTakhfif(takhfif);
+    allPriceFood();
+});
+$("#trash-takhfif").click(function(){
+    $(".code-takhfif .trash-takhfif").css("display" , "none");
+    $(".code-takhfif .plus-takhfif").css("display" , "flex");
+    $(".code-takhfif").css("background-color" , "transparent");
+    $(".code-takhfif input").val("");
+});

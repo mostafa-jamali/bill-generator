@@ -82,11 +82,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.f-size2{
+.qty{
     width: 15px;
     letter-spacing: -5px;
     font-size: 28px;
     font-weight: bold;
+    font-family: number;
 }
 .food{
     width: 65%;
@@ -176,9 +177,6 @@ h1 span{
     justify-content: center;
     background-color: tomato;
 }
-#qty{
-    font-family: number;
-}
 .info-sefaresh .left-side .sabte-sefaresh{
     width: 297px;
     height: 60px;
@@ -196,7 +194,7 @@ h1 span{
     background-color: #ff7b00;
     transform: scaleY(1.1);
 }
-#plus-food:hover,#mines-food:hover{
+.plus-food:hover,.mines-food:hover{
     width: 80%;
     cursor: pointer;
 }
@@ -210,6 +208,6 @@ h1 span{
     background-color: #fc1900;
     transform: scale(1.1);
 }
-.mines-food{
+.mines-icon{
     display: none !important;
 }
