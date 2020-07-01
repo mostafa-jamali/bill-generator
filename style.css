@@ -211,3 +211,9 @@ h1 span{
 .mines-icon{
     display: none !important;
 }
+.all{
+    font-family: number;
+}
+.close{
+    outline: none !important;
+}

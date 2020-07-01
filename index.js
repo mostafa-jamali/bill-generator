@@ -27,12 +27,12 @@ function minus(id){
 
 function allPriceFood(){
     let sum = 0;
-    for (let i = 1; i < $("#table tbody").children().length; i++) {
+    for (let i = 1; i < $("#table tbody").children().length + 1; i++) {
         const priceFood= parseInt($("#table tbody #" + `${i}`).find($(".price-food")).text());        
         sum += priceFood
     }
     const allPrice = $(".all-price-food").text(sum);
-    $("#all").text(sum + parseInt($("#service").text()) - parseInt($("#amount-takhfif").text()));
+    $(".all").text(sum + parseInt($("#service").text()) - parseInt($("#amount-takhfif").text()));
 }
 
 const takhfif= {
