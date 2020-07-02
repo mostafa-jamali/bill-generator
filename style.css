@@ -198,7 +198,7 @@ h1 span{
     width: 80%;
     cursor: pointer;
 }
-#plus-takhfif:hover{
+.plus-takhfif:hover{
     cursor: pointer;
     background-color: #ff6600;
     transform: scale(1.1);

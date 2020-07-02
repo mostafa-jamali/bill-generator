@@ -1,19 +1,27 @@
 
+for (let i = 1; i < $("#table tbody").children().length +1; i++) {
+    $this = $("#table tbody tr").eq([i-1]).attr("id",`${i}`);
+
+    $this.find($(".plus-food")).attr("onclick",`plus(${i})`);
+    $this.find($(".mines-food")).attr("onclick",`minus(${i})`);
+}
+
+
 function plus(id){
     $this = $("#table tbody #" + `${id}`);
-    // let i = $this.attr('id');
     // calc for price-food
-    const qty = parseInt($this.find($(".qty")).text());
+    const qty = parseInt($this.find($(".qty")).text());    
     $this.find($(".mines-icon")).removeClass("mines-icon");
     $this.find($(".qty")).text(qty + 1);
     const price = parseInt($this.find($(".price")).text());
     $this.find($(".price-food")).text((qty+1) * price);
-
-    allPriceFood();   
+    // calc for all-price
+    allPriceFood();  
 }
 
 function minus(id){
     $this = $("#table tbody #" + `${id}`);
+    // calc for price-food
     const qty = parseInt($this.find($(".qty")).text()) - 1;
     if (qty <= 0) {
         $this.find($(".mines-food")).parent().addClass("mines-icon");
@@ -21,7 +29,7 @@ function minus(id){
     $this.find($(".qty")).text(qty);
     const price = parseInt($this.find($(".price")).text());
     $this.find($(".price-food")).text((qty) * price);
-
+    // calc for all-price
     allPriceFood();
 }
 
@@ -49,21 +57,22 @@ function codeTakhfif(obj){
             $(".code-takhfif").css("background-color" , "rgb(217,246,230)");
             $(".code-takhfif .plus-takhfif").css("display" , "none");
             $(".code-takhfif .trash-takhfif").css("display" , "flex");
-        } else {
-            // $(".code-takhfif input").val("");
-            // $("#amount-takhfif").html(0);
-            // $(".code-takhfif").css("background-color" , "rgb(251,223,220)");
+        } else if(code == "") {
+            $(".code-takhfif input").val(" کد تخفیف صحیح نیست!");
+            $("#amount-takhfif").html(0);
+            $(".code-takhfif").css("background-color" , "rgb(251,223,220)");
+            setTimeout(()=>{
+                $(".code-takhfif input").val("");
+                $(".code-takhfif").css("background-color" , "transparent");
+            } ,2000)
         }
     }
+    allPriceFood();
 }
 
-$("#plus-takhfif").click(function(){
-    codeTakhfif(takhfif);
-    allPriceFood();
-});
-$("#trash-takhfif").click(function(){
+function trashTakhfif(){
     $(".code-takhfif .trash-takhfif").css("display" , "none");
     $(".code-takhfif .plus-takhfif").css("display" , "flex");
     $(".code-takhfif").css("background-color" , "transparent");
     $(".code-takhfif input").val("");
-});
+}
