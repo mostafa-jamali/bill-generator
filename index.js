@@ -57,17 +57,19 @@ function codeTakhfif(obj){
             $(".code-takhfif").css("background-color" , "rgb(217,246,230)");
             $(".code-takhfif .plus-takhfif").css("display" , "none");
             $(".code-takhfif .trash-takhfif").css("display" , "flex");
-        } else if(code == "") {
-            $(".code-takhfif input").val(" کد تخفیف صحیح نیست!");
+            allPriceFood();
+            return;
+        } else {
+            // $(".code-takhfif input").val(" کد تخفیف صحیح نیست!");
             $("#amount-takhfif").html(0);
             $(".code-takhfif").css("background-color" , "rgb(251,223,220)");
-            setTimeout(()=>{
-                $(".code-takhfif input").val("");
-                $(".code-takhfif").css("background-color" , "transparent");
-            } ,2000)
+            // setTimeout(()=>{
+            //     $(".code-takhfif input").val("");
+            //     $(".code-takhfif").css("background-color" , "transparent");
+            // } ,2000);
+            allPriceFood();
         }
     }
-    allPriceFood();
 }
 
 function trashTakhfif(){
@@ -75,4 +77,13 @@ function trashTakhfif(){
     $(".code-takhfif .plus-takhfif").css("display" , "flex");
     $(".code-takhfif").css("background-color" , "transparent");
     $(".code-takhfif input").val("");
+}
+
+function refresh(){
+    $(".qty").text(0);
+    $(".mines-food").parent().addClass("mines-icon");
+    $(".price-food").text(0);
+    $(".all-price-food").text(0);
+    $("#amount-takhfif").text(0);
+    $(".all").text(0);
 }
