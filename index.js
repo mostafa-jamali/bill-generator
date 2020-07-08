@@ -59,17 +59,15 @@ function codeTakhfif(obj){
             $(".code-takhfif .trash-takhfif").css("display" , "flex");
             allPriceFood();
             return;
-        } else {
-            // $(".code-takhfif input").val(" کد تخفیف صحیح نیست!");
-            $("#amount-takhfif").html(0);
-            $(".code-takhfif").css("background-color" , "rgb(251,223,220)");
-            // setTimeout(()=>{
-            //     $(".code-takhfif input").val("");
-            //     $(".code-takhfif").css("background-color" , "transparent");
-            // } ,2000);
-            allPriceFood();
         }
     }
+    $("#amount-takhfif").html(0);
+    $(".code-takhfif").css("background-color" , "rgb(251,223,220)");
+    setTimeout(()=>{
+        $(".code-takhfif input").val("");
+        $(".code-takhfif").css("background-color" , "transparent");
+    } ,2000);
+    allPriceFood();
 }
 
 function trashTakhfif(){
